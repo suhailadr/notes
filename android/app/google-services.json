@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "896071346411",
+    "project_id": "mudavvanath",
+    "storage_bucket": "mudavvanath.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896071346411:android:1f02efe22013592eab76ae",
+        "android_client_info": {
+          "package_name": "com.example.mudavvanath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896071346411-f4i9fm2gutfdg73sabieb64hr5e39bjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCybrTS2H1R7FxaZLCrDX9GmdH5J95ylqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896071346411-f4i9fm2gutfdg73sabieb64hr5e39bjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896071346411:android:ff1967dc7e34599aab76ae",
+        "android_client_info": {
+          "package_name": "com.kulliyya.mudavvanath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896071346411-f4i9fm2gutfdg73sabieb64hr5e39bjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCybrTS2H1R7FxaZLCrDX9GmdH5J95ylqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896071346411-f4i9fm2gutfdg73sabieb64hr5e39bjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
