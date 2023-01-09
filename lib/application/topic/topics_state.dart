@@ -14,12 +14,13 @@ class TopicsState with _$TopicsState {
 
   factory TopicsState.initial() {
     return const TopicsState(
-        isLoading: false,
-        topics: [],
-        successOrFilureOpiton: None(),
-        fileToUpload: Topic(topic: '', fileName: '', id: '', keyWords: []),
-        isCompleted: false,
-        selectedFilePath: '',
-        isUploading: false);
+      isLoading: false,
+      topics: [],
+      successOrFilureOpiton: None(),
+      fileToUpload: Topic(topic: '', fileName: '', id: '', keyWords: []),
+      isCompleted: false,
+      selectedFilePath: '',
+      isUploading: false,
+    );
   }
 }

@@ -2,11 +2,13 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mudavvanath/domain/modals/topic.dart';
 import 'package:mudavvanath/domain/failures/main_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mudavvanath/domain/services/topic_services.dart';
+import 'package:path_provider/path_provider.dart';
 
 @LazySingleton(as: TopicServices)
 class TopicsRepository implements TopicServices {
@@ -64,6 +66,32 @@ class TopicsRepository implements TopicServices {
     try {
       try {
         FirebaseFirestore.instance.collection('topics').doc(id).delete();
+      } catch (e) {
+        return const Left(MainFailure.serverFailure());
+      }
+    } catch (_) {
+      return const Left(MainFailure.clientFailure());
+    }
+  }
+
+  @override
+  Future savePdf(String subId, String fileName) async {
+    try {
+      try {
+        final storageRef = FirebaseStorage.instance.ref();
+
+        final pdfPath =
+            await storageRef.child("$subId/$fileName").getDownloadURL();
+        var request = await HttpClient().getUrl(Uri.parse(pdfPath));
+        var response = await request.close();
+        var bytes = await consolidateHttpClientResponseBytes(response);
+        var dir = await getExternalStorageDirectory();
+        String filepath = "${dir!.path}/$fileName";
+        // print("Download files");
+
+        File file = File(filepath);
+
+        await file.writeAsBytes(bytes, flush: true);
       } catch (e) {
         return const Left(MainFailure.serverFailure());
       }

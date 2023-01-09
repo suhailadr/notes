@@ -54,5 +54,10 @@ class TopicsBloc extends Bloc<TopicsEvent, TopicsState> {
     on<_DeleteTopic>((event, emit) async {
       await _topicServices.deleteTopic(event.id);
     });
+    on<_SavePdf>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      await _topicServices.savePdf(event.subId, event.fileName);
+      emit(state.copyWith(isLoading: false));
+    });
   }
 }
