@@ -22,18 +22,52 @@ class HomePage extends StatelessWidget {
       ),
     );
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(70),
-        child: CustomAppBar(
-          title: "Main Page",
-        ),
-      ),
-      body: GridView.count(
-        padding: const EdgeInsets.all(10),
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
-        crossAxisCount: 3,
-        children: iconList,
+      backgroundColor: Color.fromARGB(255, 221, 235, 253),
+      // appBar: const PreferredSize(
+      //   preferredSize: Size.fromHeight(70),
+      //   child: CustomAppBar(
+      //     backButton: false,
+      //     title: "Main Page",
+      //   ),
+      // ),
+      body: Stack(
+        children: [
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: MediaQuery.of(context).size.height * 0.5,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/images/wallpaper.jpg')),
+                  // color: Colors.green,
+                  borderRadius: BorderRadiusDirectional.vertical(
+                      bottom: Radius.circular(50))),
+            ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.height * 0.4,
+            left: 25,
+            right: 25,
+            bottom: 30,
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  color: Color.fromARGB(255, 255, 255, 255)),
+              child: GridView.count(
+                padding: const EdgeInsets.all(20),
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 20,
+                crossAxisCount: 3,
+                children: iconList,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

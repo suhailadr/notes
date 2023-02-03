@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Colors.teal;
+const kPrimaryColor = Color.fromARGB(255, 6, 209, 33);

@@ -14,6 +14,7 @@ class MyPdfViewer extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(70),
         child: CustomAppBar(
+          backButton: true,
           title: title.toString(),
         ),
       ),

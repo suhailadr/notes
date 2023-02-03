@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: kPrimaryColor),
+        theme: ThemeData(primarySwatch: Colors.teal),
         home: const HomePage(),
       ),
     );

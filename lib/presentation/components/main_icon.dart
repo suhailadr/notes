@@ -13,28 +13,25 @@ class MainIcon extends StatelessWidget {
     return GestureDetector(
       onTap: (() => Navigator.push(
           context, MaterialPageRoute(builder: (context) => onTapTo))),
-      child: Hero(
-        tag: title.toString(),
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: kPrimaryColor, width: 1.5),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(icon, color: kPrimaryColor),
-                const SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  title.toString(),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: kPrimaryColor.withOpacity(0.6)),
-                )
-              ],
-            ),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: kPrimaryColor, width: 1.5),
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: kPrimaryColor),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                title.toString(),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: kPrimaryColor.withOpacity(0.6)),
+              )
+            ],
           ),
         ),
       ),

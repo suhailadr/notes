@@ -25,40 +25,51 @@ class TopicPage extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(70),
-        child: Hero(
-          tag: title.toString(),
-          child: CustomAppBar(
-            title: title.toString(),
-          ),
+        child: CustomAppBar(
+          backButton: true,
+          title: title.toString(),
         ),
       ),
-      body: Container(
-        margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 10),
-        padding: const EdgeInsets.all(15),
-        height: double.infinity,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          border: Border.all(color: kPrimaryColor, width: 1.5),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: BlocBuilder<TopicsBloc, TopicsState>(
-          builder: (context, state) {
-            return state.isLoading
-                ? const Center(child: Loader())
-                : ListView.separated(
-                    itemBuilder: ((context, index) {
-                      final data = state.topics[index];
-                      return TopicBox(
-                        title: data.topic.toString(),
-                        subId: data.id.toString(),
-                        fileName: data.fileName.toString(),
-                      );
-                    }),
-                    separatorBuilder: ((context, index) => const Divider()),
-                    itemCount: state.topics.length);
-          },
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Text('Assalamualaikum',
+            //     style: TextStyle(color: Colors.grey, fontSize: 20)),
+            Text(title.toString(),
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold))
+          ],
         ),
       ),
+
+      // body: Container(
+      //   margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 10),
+      //   padding: const EdgeInsets.all(15),
+      //   height: double.infinity,
+      //   width: double.infinity,
+      //   decoration: BoxDecoration(
+      //     border: Border.all(color: kPrimaryColor, width: 1.5),
+      //     borderRadius: BorderRadius.circular(12),
+      //   ),
+      //   child: BlocBuilder<TopicsBloc, TopicsState>(
+      //     builder: (context, state) {
+      //       return state.isLoading
+      //           ? const Center(child: Loader())
+      //           : ListView.separated(
+      //               itemBuilder: ((context, index) {
+      //                 final data = state.topics[index];
+      //                 return TopicBox(
+      //                   title: data.topic.toString(),
+      //                   subId: data.id.toString(),
+      //                   fileName: data.fileName.toString(),
+      //                 );
+      //               }),
+      //               separatorBuilder: ((context, index) => const Divider()),
+      //               itemCount: state.topics.length);
+      //     },
+      //   ),
+      // ),
       floatingActionButton: FloatingActionButton.small(
           child: const Icon(Icons.add),
           onPressed: () {
