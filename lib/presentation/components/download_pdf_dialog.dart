@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mudavvanath/core/colors.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../../application/topic/topics_bloc.dart';
+import '../pdf_viewer.dart';
 
 class DownloadPdfDialog extends StatelessWidget {
   final String subId, fileName;
@@ -10,9 +13,21 @@ class DownloadPdfDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<TopicsBloc, TopicsState>(listener: ((context, state) {
+    return BlocConsumer<TopicsBloc, TopicsState>(
+        listener: ((context, state) async {
+      var dir = await getExternalStorageDirectory();
       if (!state.isLoading) {
+        // ignore: use_build_context_synchronously
         Navigator.pop(context);
+        String filePath = '${dir!.path}/$fileName';
+        // ignore: use_build_context_synchronously
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: ((_) => MyPdfViewer(
+                      title: 'title',
+                      filePath: filePath,
+                    ))));
       }
     }), builder: (context, state) {
       return AlertDialog(
@@ -20,10 +35,11 @@ class DownloadPdfDialog extends StatelessWidget {
           borderRadius: BorderRadius.circular(30.0),
         ),
         title: const CircleAvatar(
-          child: Icon(Icons.download),
+          backgroundColor: kPrimaryColor,
+          child: Icon(Icons.download, color: Colors.white),
         ),
         content: const Text(
-          'File not found!',
+          'You have to download the file',
           style: TextStyle(fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
@@ -42,7 +58,8 @@ class DownloadPdfDialog extends StatelessWidget {
                           child: CircularProgressIndicator()))
                   : const Text(
                       'Download',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: kPrimaryColor),
                     )),
         ],
       );

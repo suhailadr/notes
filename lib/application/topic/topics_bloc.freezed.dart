@@ -23,6 +23,8 @@ mixin _$TopicsEvent {
     required TResult Function(Topic file) uploadTopicEvent,
     required TResult Function(String id) deleteTopic,
     required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +34,8 @@ mixin _$TopicsEvent {
     TResult? Function(Topic file)? uploadTopicEvent,
     TResult? Function(String id)? deleteTopic,
     TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +45,8 @@ mixin _$TopicsEvent {
     TResult Function(Topic file)? uploadTopicEvent,
     TResult Function(String id)? deleteTopic,
     TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +57,8 @@ mixin _$TopicsEvent {
     required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
     required TResult Function(_DeleteTopic value) deleteTopic,
     required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +68,8 @@ mixin _$TopicsEvent {
     TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult? Function(_DeleteTopic value)? deleteTopic,
     TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +79,8 @@ mixin _$TopicsEvent {
     TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult Function(_DeleteTopic value)? deleteTopic,
     TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -161,6 +173,8 @@ class _$_GetTopicsEvent implements _GetTopicsEvent {
     required TResult Function(Topic file) uploadTopicEvent,
     required TResult Function(String id) deleteTopic,
     required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
   }) {
     return getTopicsEvent(subId);
   }
@@ -173,6 +187,8 @@ class _$_GetTopicsEvent implements _GetTopicsEvent {
     TResult? Function(Topic file)? uploadTopicEvent,
     TResult? Function(String id)? deleteTopic,
     TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
   }) {
     return getTopicsEvent?.call(subId);
   }
@@ -185,6 +201,8 @@ class _$_GetTopicsEvent implements _GetTopicsEvent {
     TResult Function(Topic file)? uploadTopicEvent,
     TResult Function(String id)? deleteTopic,
     TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
     required TResult orElse(),
   }) {
     if (getTopicsEvent != null) {
@@ -201,6 +219,8 @@ class _$_GetTopicsEvent implements _GetTopicsEvent {
     required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
     required TResult Function(_DeleteTopic value) deleteTopic,
     required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
   }) {
     return getTopicsEvent(this);
   }
@@ -213,6 +233,8 @@ class _$_GetTopicsEvent implements _GetTopicsEvent {
     TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult? Function(_DeleteTopic value)? deleteTopic,
     TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
   }) {
     return getTopicsEvent?.call(this);
   }
@@ -225,6 +247,8 @@ class _$_GetTopicsEvent implements _GetTopicsEvent {
     TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult Function(_DeleteTopic value)? deleteTopic,
     TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
     required TResult orElse(),
   }) {
     if (getTopicsEvent != null) {
@@ -313,6 +337,8 @@ class _$_SelectFile implements _SelectFile {
     required TResult Function(Topic file) uploadTopicEvent,
     required TResult Function(String id) deleteTopic,
     required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
   }) {
     return selectFile(filePath);
   }
@@ -325,6 +351,8 @@ class _$_SelectFile implements _SelectFile {
     TResult? Function(Topic file)? uploadTopicEvent,
     TResult? Function(String id)? deleteTopic,
     TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
   }) {
     return selectFile?.call(filePath);
   }
@@ -337,6 +365,8 @@ class _$_SelectFile implements _SelectFile {
     TResult Function(Topic file)? uploadTopicEvent,
     TResult Function(String id)? deleteTopic,
     TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
     required TResult orElse(),
   }) {
     if (selectFile != null) {
@@ -353,6 +383,8 @@ class _$_SelectFile implements _SelectFile {
     required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
     required TResult Function(_DeleteTopic value) deleteTopic,
     required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
   }) {
     return selectFile(this);
   }
@@ -365,6 +397,8 @@ class _$_SelectFile implements _SelectFile {
     TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult? Function(_DeleteTopic value)? deleteTopic,
     TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
   }) {
     return selectFile?.call(this);
   }
@@ -377,6 +411,8 @@ class _$_SelectFile implements _SelectFile {
     TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult Function(_DeleteTopic value)? deleteTopic,
     TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
     required TResult orElse(),
   }) {
     if (selectFile != null) {
@@ -474,6 +510,8 @@ class _$_UploadTopicEvent implements _UploadTopicEvent {
     required TResult Function(Topic file) uploadTopicEvent,
     required TResult Function(String id) deleteTopic,
     required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
   }) {
     return uploadTopicEvent(file);
   }
@@ -486,6 +524,8 @@ class _$_UploadTopicEvent implements _UploadTopicEvent {
     TResult? Function(Topic file)? uploadTopicEvent,
     TResult? Function(String id)? deleteTopic,
     TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
   }) {
     return uploadTopicEvent?.call(file);
   }
@@ -498,6 +538,8 @@ class _$_UploadTopicEvent implements _UploadTopicEvent {
     TResult Function(Topic file)? uploadTopicEvent,
     TResult Function(String id)? deleteTopic,
     TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
     required TResult orElse(),
   }) {
     if (uploadTopicEvent != null) {
@@ -514,6 +556,8 @@ class _$_UploadTopicEvent implements _UploadTopicEvent {
     required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
     required TResult Function(_DeleteTopic value) deleteTopic,
     required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
   }) {
     return uploadTopicEvent(this);
   }
@@ -526,6 +570,8 @@ class _$_UploadTopicEvent implements _UploadTopicEvent {
     TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult? Function(_DeleteTopic value)? deleteTopic,
     TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
   }) {
     return uploadTopicEvent?.call(this);
   }
@@ -538,6 +584,8 @@ class _$_UploadTopicEvent implements _UploadTopicEvent {
     TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult Function(_DeleteTopic value)? deleteTopic,
     TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
     required TResult orElse(),
   }) {
     if (uploadTopicEvent != null) {
@@ -625,6 +673,8 @@ class _$_DeleteTopic implements _DeleteTopic {
     required TResult Function(Topic file) uploadTopicEvent,
     required TResult Function(String id) deleteTopic,
     required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
   }) {
     return deleteTopic(id);
   }
@@ -637,6 +687,8 @@ class _$_DeleteTopic implements _DeleteTopic {
     TResult? Function(Topic file)? uploadTopicEvent,
     TResult? Function(String id)? deleteTopic,
     TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
   }) {
     return deleteTopic?.call(id);
   }
@@ -649,6 +701,8 @@ class _$_DeleteTopic implements _DeleteTopic {
     TResult Function(Topic file)? uploadTopicEvent,
     TResult Function(String id)? deleteTopic,
     TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
     required TResult orElse(),
   }) {
     if (deleteTopic != null) {
@@ -665,6 +719,8 @@ class _$_DeleteTopic implements _DeleteTopic {
     required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
     required TResult Function(_DeleteTopic value) deleteTopic,
     required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
   }) {
     return deleteTopic(this);
   }
@@ -677,6 +733,8 @@ class _$_DeleteTopic implements _DeleteTopic {
     TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult? Function(_DeleteTopic value)? deleteTopic,
     TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
   }) {
     return deleteTopic?.call(this);
   }
@@ -689,6 +747,8 @@ class _$_DeleteTopic implements _DeleteTopic {
     TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult Function(_DeleteTopic value)? deleteTopic,
     TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
     required TResult orElse(),
   }) {
     if (deleteTopic != null) {
@@ -784,6 +844,8 @@ class _$_SavePdf implements _SavePdf {
     required TResult Function(Topic file) uploadTopicEvent,
     required TResult Function(String id) deleteTopic,
     required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
   }) {
     return savePdf(subId, fileName);
   }
@@ -796,6 +858,8 @@ class _$_SavePdf implements _SavePdf {
     TResult? Function(Topic file)? uploadTopicEvent,
     TResult? Function(String id)? deleteTopic,
     TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
   }) {
     return savePdf?.call(subId, fileName);
   }
@@ -808,6 +872,8 @@ class _$_SavePdf implements _SavePdf {
     TResult Function(Topic file)? uploadTopicEvent,
     TResult Function(String id)? deleteTopic,
     TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
     required TResult orElse(),
   }) {
     if (savePdf != null) {
@@ -824,6 +890,8 @@ class _$_SavePdf implements _SavePdf {
     required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
     required TResult Function(_DeleteTopic value) deleteTopic,
     required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
   }) {
     return savePdf(this);
   }
@@ -836,6 +904,8 @@ class _$_SavePdf implements _SavePdf {
     TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult? Function(_DeleteTopic value)? deleteTopic,
     TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
   }) {
     return savePdf?.call(this);
   }
@@ -848,6 +918,8 @@ class _$_SavePdf implements _SavePdf {
     TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
     TResult Function(_DeleteTopic value)? deleteTopic,
     TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
     required TResult orElse(),
   }) {
     if (savePdf != null) {
@@ -869,11 +941,347 @@ abstract class _SavePdf implements TopicsEvent {
 }
 
 /// @nodoc
+abstract class _$$_SearchCopyWith<$Res> {
+  factory _$$_SearchCopyWith(_$_Search value, $Res Function(_$_Search) then) =
+      __$$_SearchCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String query});
+}
+
+/// @nodoc
+class __$$_SearchCopyWithImpl<$Res>
+    extends _$TopicsEventCopyWithImpl<$Res, _$_Search>
+    implements _$$_SearchCopyWith<$Res> {
+  __$$_SearchCopyWithImpl(_$_Search _value, $Res Function(_$_Search) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? query = null,
+  }) {
+    return _then(_$_Search(
+      null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Search implements _Search {
+  const _$_Search(this.query);
+
+  @override
+  final String query;
+
+  @override
+  String toString() {
+    return 'TopicsEvent.search(query: $query)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Search &&
+            (identical(other.query, query) || other.query == query));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
+      __$$_SearchCopyWithImpl<_$_Search>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String subId) getTopicsEvent,
+    required TResult Function(String filePath) selectFile,
+    required TResult Function(Topic file) uploadTopicEvent,
+    required TResult Function(String id) deleteTopic,
+    required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
+  }) {
+    return search(query);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String subId)? getTopicsEvent,
+    TResult? Function(String filePath)? selectFile,
+    TResult? Function(Topic file)? uploadTopicEvent,
+    TResult? Function(String id)? deleteTopic,
+    TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
+  }) {
+    return search?.call(query);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String subId)? getTopicsEvent,
+    TResult Function(String filePath)? selectFile,
+    TResult Function(Topic file)? uploadTopicEvent,
+    TResult Function(String id)? deleteTopic,
+    TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
+    required TResult orElse(),
+  }) {
+    if (search != null) {
+      return search(query);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetTopicsEvent value) getTopicsEvent,
+    required TResult Function(_SelectFile value) selectFile,
+    required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
+    required TResult Function(_DeleteTopic value) deleteTopic,
+    required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
+  }) {
+    return search(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetTopicsEvent value)? getTopicsEvent,
+    TResult? Function(_SelectFile value)? selectFile,
+    TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
+    TResult? Function(_DeleteTopic value)? deleteTopic,
+    TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
+  }) {
+    return search?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetTopicsEvent value)? getTopicsEvent,
+    TResult Function(_SelectFile value)? selectFile,
+    TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
+    TResult Function(_DeleteTopic value)? deleteTopic,
+    TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
+    required TResult orElse(),
+  }) {
+    if (search != null) {
+      return search(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Search implements TopicsEvent {
+  const factory _Search(final String query) = _$_Search;
+
+  String get query;
+  @JsonKey(ignore: true)
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_EditTopicCopyWith<$Res> {
+  factory _$$_EditTopicCopyWith(
+          _$_EditTopic value, $Res Function(_$_EditTopic) then) =
+      __$$_EditTopicCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String id, String newValue});
+}
+
+/// @nodoc
+class __$$_EditTopicCopyWithImpl<$Res>
+    extends _$TopicsEventCopyWithImpl<$Res, _$_EditTopic>
+    implements _$$_EditTopicCopyWith<$Res> {
+  __$$_EditTopicCopyWithImpl(
+      _$_EditTopic _value, $Res Function(_$_EditTopic) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? newValue = null,
+  }) {
+    return _then(_$_EditTopic(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == newValue
+          ? _value.newValue
+          : newValue // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_EditTopic implements _EditTopic {
+  const _$_EditTopic(this.id, this.newValue);
+
+  @override
+  final String id;
+  @override
+  final String newValue;
+
+  @override
+  String toString() {
+    return 'TopicsEvent.editTopic(id: $id, newValue: $newValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EditTopic &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.newValue, newValue) ||
+                other.newValue == newValue));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, newValue);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_EditTopicCopyWith<_$_EditTopic> get copyWith =>
+      __$$_EditTopicCopyWithImpl<_$_EditTopic>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String subId) getTopicsEvent,
+    required TResult Function(String filePath) selectFile,
+    required TResult Function(Topic file) uploadTopicEvent,
+    required TResult Function(String id) deleteTopic,
+    required TResult Function(String subId, String fileName) savePdf,
+    required TResult Function(String query) search,
+    required TResult Function(String id, String newValue) editTopic,
+  }) {
+    return editTopic(id, newValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String subId)? getTopicsEvent,
+    TResult? Function(String filePath)? selectFile,
+    TResult? Function(Topic file)? uploadTopicEvent,
+    TResult? Function(String id)? deleteTopic,
+    TResult? Function(String subId, String fileName)? savePdf,
+    TResult? Function(String query)? search,
+    TResult? Function(String id, String newValue)? editTopic,
+  }) {
+    return editTopic?.call(id, newValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String subId)? getTopicsEvent,
+    TResult Function(String filePath)? selectFile,
+    TResult Function(Topic file)? uploadTopicEvent,
+    TResult Function(String id)? deleteTopic,
+    TResult Function(String subId, String fileName)? savePdf,
+    TResult Function(String query)? search,
+    TResult Function(String id, String newValue)? editTopic,
+    required TResult orElse(),
+  }) {
+    if (editTopic != null) {
+      return editTopic(id, newValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetTopicsEvent value) getTopicsEvent,
+    required TResult Function(_SelectFile value) selectFile,
+    required TResult Function(_UploadTopicEvent value) uploadTopicEvent,
+    required TResult Function(_DeleteTopic value) deleteTopic,
+    required TResult Function(_SavePdf value) savePdf,
+    required TResult Function(_Search value) search,
+    required TResult Function(_EditTopic value) editTopic,
+  }) {
+    return editTopic(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetTopicsEvent value)? getTopicsEvent,
+    TResult? Function(_SelectFile value)? selectFile,
+    TResult? Function(_UploadTopicEvent value)? uploadTopicEvent,
+    TResult? Function(_DeleteTopic value)? deleteTopic,
+    TResult? Function(_SavePdf value)? savePdf,
+    TResult? Function(_Search value)? search,
+    TResult? Function(_EditTopic value)? editTopic,
+  }) {
+    return editTopic?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetTopicsEvent value)? getTopicsEvent,
+    TResult Function(_SelectFile value)? selectFile,
+    TResult Function(_UploadTopicEvent value)? uploadTopicEvent,
+    TResult Function(_DeleteTopic value)? deleteTopic,
+    TResult Function(_SavePdf value)? savePdf,
+    TResult Function(_Search value)? search,
+    TResult Function(_EditTopic value)? editTopic,
+    required TResult orElse(),
+  }) {
+    if (editTopic != null) {
+      return editTopic(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EditTopic implements TopicsEvent {
+  const factory _EditTopic(final String id, final String newValue) =
+      _$_EditTopic;
+
+  String get id;
+  String get newValue;
+  @JsonKey(ignore: true)
+  _$$_EditTopicCopyWith<_$_EditTopic> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$TopicsState {
   bool get isLoading => throw _privateConstructorUsedError;
   List<Topic> get topics => throw _privateConstructorUsedError;
   Option<Either<MainFailure, List<Topic>>> get successOrFilureOpiton =>
       throw _privateConstructorUsedError;
+  List<Topic> get searcResults => throw _privateConstructorUsedError;
   Topic get fileToUpload => throw _privateConstructorUsedError;
   String get selectedFilePath => throw _privateConstructorUsedError;
   bool get isUploading => throw _privateConstructorUsedError;
@@ -894,6 +1302,7 @@ abstract class $TopicsStateCopyWith<$Res> {
       {bool isLoading,
       List<Topic> topics,
       Option<Either<MainFailure, List<Topic>>> successOrFilureOpiton,
+      List<Topic> searcResults,
       Topic fileToUpload,
       String selectedFilePath,
       bool isUploading,
@@ -918,6 +1327,7 @@ class _$TopicsStateCopyWithImpl<$Res, $Val extends TopicsState>
     Object? isLoading = null,
     Object? topics = null,
     Object? successOrFilureOpiton = null,
+    Object? searcResults = null,
     Object? fileToUpload = null,
     Object? selectedFilePath = null,
     Object? isUploading = null,
@@ -936,6 +1346,10 @@ class _$TopicsStateCopyWithImpl<$Res, $Val extends TopicsState>
           ? _value.successOrFilureOpiton
           : successOrFilureOpiton // ignore: cast_nullable_to_non_nullable
               as Option<Either<MainFailure, List<Topic>>>,
+      searcResults: null == searcResults
+          ? _value.searcResults
+          : searcResults // ignore: cast_nullable_to_non_nullable
+              as List<Topic>,
       fileToUpload: null == fileToUpload
           ? _value.fileToUpload
           : fileToUpload // ignore: cast_nullable_to_non_nullable
@@ -976,6 +1390,7 @@ abstract class _$$_TopicsStateCopyWith<$Res>
       {bool isLoading,
       List<Topic> topics,
       Option<Either<MainFailure, List<Topic>>> successOrFilureOpiton,
+      List<Topic> searcResults,
       Topic fileToUpload,
       String selectedFilePath,
       bool isUploading,
@@ -999,6 +1414,7 @@ class __$$_TopicsStateCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? topics = null,
     Object? successOrFilureOpiton = null,
+    Object? searcResults = null,
     Object? fileToUpload = null,
     Object? selectedFilePath = null,
     Object? isUploading = null,
@@ -1017,6 +1433,10 @@ class __$$_TopicsStateCopyWithImpl<$Res>
           ? _value.successOrFilureOpiton
           : successOrFilureOpiton // ignore: cast_nullable_to_non_nullable
               as Option<Either<MainFailure, List<Topic>>>,
+      searcResults: null == searcResults
+          ? _value._searcResults
+          : searcResults // ignore: cast_nullable_to_non_nullable
+              as List<Topic>,
       fileToUpload: null == fileToUpload
           ? _value.fileToUpload
           : fileToUpload // ignore: cast_nullable_to_non_nullable
@@ -1044,11 +1464,13 @@ class _$_TopicsState implements _TopicsState {
       {required this.isLoading,
       required final List<Topic> topics,
       required this.successOrFilureOpiton,
+      required final List<Topic> searcResults,
       required this.fileToUpload,
       required this.selectedFilePath,
       required this.isUploading,
       required this.isCompleted})
-      : _topics = topics;
+      : _topics = topics,
+        _searcResults = searcResults;
 
   @override
   final bool isLoading;
@@ -1061,6 +1483,13 @@ class _$_TopicsState implements _TopicsState {
 
   @override
   final Option<Either<MainFailure, List<Topic>>> successOrFilureOpiton;
+  final List<Topic> _searcResults;
+  @override
+  List<Topic> get searcResults {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_searcResults);
+  }
+
   @override
   final Topic fileToUpload;
   @override
@@ -1072,7 +1501,7 @@ class _$_TopicsState implements _TopicsState {
 
   @override
   String toString() {
-    return 'TopicsState(isLoading: $isLoading, topics: $topics, successOrFilureOpiton: $successOrFilureOpiton, fileToUpload: $fileToUpload, selectedFilePath: $selectedFilePath, isUploading: $isUploading, isCompleted: $isCompleted)';
+    return 'TopicsState(isLoading: $isLoading, topics: $topics, successOrFilureOpiton: $successOrFilureOpiton, searcResults: $searcResults, fileToUpload: $fileToUpload, selectedFilePath: $selectedFilePath, isUploading: $isUploading, isCompleted: $isCompleted)';
   }
 
   @override
@@ -1085,6 +1514,8 @@ class _$_TopicsState implements _TopicsState {
             const DeepCollectionEquality().equals(other._topics, _topics) &&
             (identical(other.successOrFilureOpiton, successOrFilureOpiton) ||
                 other.successOrFilureOpiton == successOrFilureOpiton) &&
+            const DeepCollectionEquality()
+                .equals(other._searcResults, _searcResults) &&
             (identical(other.fileToUpload, fileToUpload) ||
                 other.fileToUpload == fileToUpload) &&
             (identical(other.selectedFilePath, selectedFilePath) ||
@@ -1101,6 +1532,7 @@ class _$_TopicsState implements _TopicsState {
       isLoading,
       const DeepCollectionEquality().hash(_topics),
       successOrFilureOpiton,
+      const DeepCollectionEquality().hash(_searcResults),
       fileToUpload,
       selectedFilePath,
       isUploading,
@@ -1119,6 +1551,7 @@ abstract class _TopicsState implements TopicsState {
       required final List<Topic> topics,
       required final Option<Either<MainFailure, List<Topic>>>
           successOrFilureOpiton,
+      required final List<Topic> searcResults,
       required final Topic fileToUpload,
       required final String selectedFilePath,
       required final bool isUploading,
@@ -1130,6 +1563,8 @@ abstract class _TopicsState implements TopicsState {
   List<Topic> get topics;
   @override
   Option<Either<MainFailure, List<Topic>>> get successOrFilureOpiton;
+  @override
+  List<Topic> get searcResults;
   @override
   Topic get fileToUpload;
   @override

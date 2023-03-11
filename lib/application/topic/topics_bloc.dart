@@ -59,5 +59,22 @@ class TopicsBloc extends Bloc<TopicsEvent, TopicsState> {
       await _topicServices.savePdf(event.subId, event.fileName);
       emit(state.copyWith(isLoading: false));
     });
+
+    on<_Search>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      final Either<MainFailure, List<Topic>> result =
+          await _topicServices.search(event.query);
+      emit(
+        result.fold((l) => state.copyWith(searcResults: [], isLoading: false),
+            (data) {
+          return state.copyWith(searcResults: data, isLoading: false);
+        }),
+      );
+    });
+    on<_EditTopic>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      await _topicServices.editTopic(event.id, event.newValue);
+      emit(state.copyWith(isLoading: false));
+    });
   }
 }

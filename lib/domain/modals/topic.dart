@@ -10,6 +10,7 @@ class Topic with _$Topic {
     @JsonKey(name: 'topic') required String? topic,
     @JsonKey(name: 'file_name') required String? fileName,
     @JsonKey(name: 'sub_id') required String? id,
+    @JsonKey(name: 'id') required String? topicId,
   }) = _Topic;
 
   factory Topic.fromJson(Map<String, dynamic> json) => _$TopicFromJson(json);

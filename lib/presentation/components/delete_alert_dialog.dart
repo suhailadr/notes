@@ -4,8 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../application/topic/topics_bloc.dart';
 
 class DeleteAlertDialog extends StatelessWidget {
-  final String topic, subId;
-  const DeleteAlertDialog({Key? key, required this.subId, required this.topic})
+  final String topic, subId, id;
+  const DeleteAlertDialog(
+      {Key? key, required this.id, required this.subId, required this.topic})
       : super(key: key);
 
   @override
@@ -27,7 +28,7 @@ class DeleteAlertDialog extends StatelessWidget {
         TextButton(
           onPressed: () {
             BlocProvider.of<TopicsBloc>(context)
-                .add(TopicsEvent.deleteTopic(subId + topic));
+                .add(TopicsEvent.deleteTopic(id));
             Navigator.pop(context);
             /*
              update state and refresh ui

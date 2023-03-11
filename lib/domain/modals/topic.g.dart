@@ -11,6 +11,7 @@ _$_Topic _$$_TopicFromJson(Map<String, dynamic> json) => _$_Topic(
       topic: json['topic'] as String?,
       fileName: json['file_name'] as String?,
       id: json['sub_id'] as String?,
+      topicId: json['id'] as String?,
     );
 
 Map<String, dynamic> _$$_TopicToJson(_$_Topic instance) => <String, dynamic>{
@@ -18,4 +19,5 @@ Map<String, dynamic> _$$_TopicToJson(_$_Topic instance) => <String, dynamic>{
       'topic': instance.topic,
       'file_name': instance.fileName,
       'sub_id': instance.id,
+      'id': instance.topicId,
     };

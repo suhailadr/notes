@@ -6,6 +6,7 @@ class TopicsState with _$TopicsState {
     required bool isLoading,
     required List<Topic> topics,
     required Option<Either<MainFailure, List<Topic>>> successOrFilureOpiton,
+    required List<Topic> searcResults,
     required Topic fileToUpload,
     required String selectedFilePath,
     required bool isUploading,
@@ -14,13 +15,14 @@ class TopicsState with _$TopicsState {
 
   factory TopicsState.initial() {
     return const TopicsState(
-      isLoading: false,
-      topics: [],
-      successOrFilureOpiton: None(),
-      fileToUpload: Topic(topic: '', fileName: '', id: '', keyWords: []),
-      isCompleted: false,
-      selectedFilePath: '',
-      isUploading: false,
-    );
+        isLoading: false,
+        topics: [],
+        successOrFilureOpiton: None(),
+        fileToUpload:
+            Topic(topic: '', fileName: '', id: '', keyWords: [], topicId: ''),
+        isCompleted: false,
+        selectedFilePath: '',
+        isUploading: false,
+        searcResults: []);
   }
 }

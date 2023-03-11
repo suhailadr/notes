@@ -1,22 +1,53 @@
-import 'package:flutter/material.dart';
-
 List mainData = [
-  {'icon': Icons.search, 'title': 'Search', 'id': 'search'},
-  {'icon': Icons.home, 'title': 'علوم القرأن', 'id': 'quran'},
+  {'icon': 'assets/icon_svg/search.svg', 'title': 'Search', 'id': 'search'},
+  {'icon': 'assets/icon_svg/quran.svg', 'title': 'علوم القرأن', 'id': 'quran'},
   {
-    'icon': Icons.bookmark_border_outlined,
+    'icon': 'assets/icon_svg/hadees.svg',
     'title': 'علوم الحديث',
     'id': 'hadees'
   },
-  {'icon': Icons.library_music, 'title': 'علوم اللغة', 'id': 'language'},
-  {'icon': Icons.photo_library, 'title': 'علوم الفقه', 'id': 'fiqh'},
-  {'icon': Icons.video_library, 'title': 'التاريخ والسيرة', 'id': 'history'},
-  {'icon': Icons.library_books, 'title': 'الطبقات والتراجم', 'id': 'tharajum'},
-  {'icon': Icons.album_outlined, 'title': 'علم العقيدة', 'id': 'aqeedah'},
-  {'icon': Icons.more_horiz, 'title': 'الفوائد العامة', 'id': 'fayida'},
-  {'icon': Icons.more_horiz, 'title': 'الوصايا والنصائح', 'id': 'vaswayaa'},
-  {'icon': Icons.more_horiz, 'title': 'ചിന്താകിരണം', 'id': 'chintha'},
-  {'icon': Icons.more_horiz, 'title': 'അനുഭവം', 'id': 'experience'},
-  {'icon': Icons.more_horiz, 'title': 'ഉപമ-ഉദാഹരണം', 'id': 'examples'},
-  {'icon': Icons.more_horiz, 'title': 'ജനറൽ കോർണർ', 'id': 'general'},
+  {'icon': 'assets/icon_svg/luga.svg', 'title': 'علوم اللغة', 'id': 'language'},
+  {'icon': 'assets/icon_svg/fiq.svg', 'title': 'علوم الفقه', 'id': 'fiqh'},
+  {
+    'icon': 'assets/icon_svg/thareeq.svg',
+    'title': 'التاريخ والسيرة',
+    'id': 'history'
+  },
+  {
+    'icon': 'assets/icon_svg/thabakath.svg',
+    'title': 'الطبقات والتراجم',
+    'id': 'tharajum'
+  },
+  {
+    'icon': 'assets/icon_svg/aqeeda.svg',
+    'title': 'علم العقيدة',
+    'id': 'aqeedah'
+  },
+  {
+    'icon': 'assets/icon_svg/favaaid.svg',
+    'title': 'الفوائد العامة',
+    'id': 'fayida'
+  },
+  {
+    'icon': 'assets/icon_svg/vaswayath.svg',
+    'title': 'الوصايا والنصائح',
+    'id': 'vaswayaa'
+  },
+  {
+    'icon': 'assets/icon_svg/kaazhchappaad.svg',
+    'title': 'കാഴ്ച്ചപ്പാട്',
+    'id': 'chintha'
+  },
+  {
+    'icon': 'assets/icon_svg/anubhavam.svg',
+    'title': 'അനുഭവം',
+    'id': 'experience'
+  },
+  {
+    'icon': 'assets/icon_svg/upama.svg',
+    'title': 'ഉപമ-ഉദാഹരണം',
+    'id': 'examples'
+  },
+  {'icon': 'assets/icon_svg/gk.svg', 'title': 'ജനറൽ കോർണർ', 'id': 'general'},
+  {'icon': 'assets/icon_svg/info.svg', 'title': 'About', 'id': 'about'},
 ];

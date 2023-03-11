@@ -131,6 +131,7 @@ class AddDialogBox extends StatelessWidget {
                       BlocProvider.of<TopicsBloc>(context).add(
                         TopicsEvent.uploadTopicEvent(
                           Topic(
+                              topicId: subId + topicController.text,
                               keyWords: [],
                               topic: topicController.text,
                               fileName: '',

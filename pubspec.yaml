@@ -46,23 +46,24 @@ dependencies:
   json_serializable: ^6.5.4
   path_provider: ^2.0.11
   syncfusion_flutter_pdfviewer: ^20.3.52
+  flutter_svg: 
+  google_fonts: ^4.0.3
+
 
 dev_dependencies:
   build_runner: ^2.3.2
-  flutter_launcher_icons: ^0.11.0
+
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
   freezed: null
   injectable_generator: null
+  flutter_native_splash:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
-flutter_icons:
-  image_path: "assets/images/icon.png"
-  android: true
-  ios: true
+
 flutter:
 
   uses-material-design: true
@@ -72,8 +73,23 @@ flutter:
   # the material Icons class.
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/pen.jpg
-    - assets/images/wallpaper.jpg
+    - assets/images/img_1.jpg
+    - assets/images/usthad_Image.jpeg
+    - assets/icon_svg/anubhavam.svg
+    - assets/icon_svg/aqeeda.svg
+    - assets/icon_svg/favaaid.svg
+    - assets/icon_svg/fiq.svg
+    - assets/icon_svg/gk.svg
+    - assets/icon_svg/hadees.svg
+    - assets/icon_svg/kaazhchappaad.svg
+    - assets/icon_svg/luga.svg
+    - assets/icon_svg/quran.svg
+    - assets/icon_svg/thabakath.svg
+    - assets/icon_svg/thareeq.svg
+    - assets/icon_svg/upama.svg
+    - assets/icon_svg/vaswayath.svg
+    - assets/icon_svg/info.svg
+    - assets/icon_svg/search.svg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -98,3 +114,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/launch_Icon.png
+  android: true
+  ios: true

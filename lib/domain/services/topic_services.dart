@@ -7,4 +7,6 @@ abstract class TopicServices {
   Future uploadTopic(String path, Topic topic);
   Future deleteTopic(String id);
   Future savePdf(String subId, String fileName);
+  Future<Either<MainFailure, List<Topic>>> search(String query);
+  Future<void> editTopic(String id, String newValue);
 }

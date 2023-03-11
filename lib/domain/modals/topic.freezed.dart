@@ -28,6 +28,8 @@ mixin _$Topic {
   String? get fileName => throw _privateConstructorUsedError;
   @JsonKey(name: 'sub_id')
   String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  String? get topicId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +45,8 @@ abstract class $TopicCopyWith<$Res> {
       {@JsonKey(name: 'key_words') List<dynamic>? keyWords,
       @JsonKey(name: 'topic') String? topic,
       @JsonKey(name: 'file_name') String? fileName,
-      @JsonKey(name: 'sub_id') String? id});
+      @JsonKey(name: 'sub_id') String? id,
+      @JsonKey(name: 'id') String? topicId});
 }
 
 /// @nodoc
@@ -63,6 +66,7 @@ class _$TopicCopyWithImpl<$Res, $Val extends Topic>
     Object? topic = freezed,
     Object? fileName = freezed,
     Object? id = freezed,
+    Object? topicId = freezed,
   }) {
     return _then(_value.copyWith(
       keyWords: freezed == keyWords
@@ -81,6 +85,10 @@ class _$TopicCopyWithImpl<$Res, $Val extends Topic>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      topicId: freezed == topicId
+          ? _value.topicId
+          : topicId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -95,7 +103,8 @@ abstract class _$$_TopicCopyWith<$Res> implements $TopicCopyWith<$Res> {
       {@JsonKey(name: 'key_words') List<dynamic>? keyWords,
       @JsonKey(name: 'topic') String? topic,
       @JsonKey(name: 'file_name') String? fileName,
-      @JsonKey(name: 'sub_id') String? id});
+      @JsonKey(name: 'sub_id') String? id,
+      @JsonKey(name: 'id') String? topicId});
 }
 
 /// @nodoc
@@ -111,6 +120,7 @@ class __$$_TopicCopyWithImpl<$Res> extends _$TopicCopyWithImpl<$Res, _$_Topic>
     Object? topic = freezed,
     Object? fileName = freezed,
     Object? id = freezed,
+    Object? topicId = freezed,
   }) {
     return _then(_$_Topic(
       keyWords: freezed == keyWords
@@ -129,6 +139,10 @@ class __$$_TopicCopyWithImpl<$Res> extends _$TopicCopyWithImpl<$Res, _$_Topic>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      topicId: freezed == topicId
+          ? _value.topicId
+          : topicId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -140,7 +154,8 @@ class _$_Topic implements _Topic {
       {@JsonKey(name: 'key_words') required final List<dynamic>? keyWords,
       @JsonKey(name: 'topic') required this.topic,
       @JsonKey(name: 'file_name') required this.fileName,
-      @JsonKey(name: 'sub_id') required this.id})
+      @JsonKey(name: 'sub_id') required this.id,
+      @JsonKey(name: 'id') required this.topicId})
       : _keyWords = keyWords;
 
   factory _$_Topic.fromJson(Map<String, dynamic> json) =>
@@ -165,10 +180,13 @@ class _$_Topic implements _Topic {
   @override
   @JsonKey(name: 'sub_id')
   final String? id;
+  @override
+  @JsonKey(name: 'id')
+  final String? topicId;
 
   @override
   String toString() {
-    return 'Topic(keyWords: $keyWords, topic: $topic, fileName: $fileName, id: $id)';
+    return 'Topic(keyWords: $keyWords, topic: $topic, fileName: $fileName, id: $id, topicId: $topicId)';
   }
 
   @override
@@ -180,13 +198,19 @@ class _$_Topic implements _Topic {
             (identical(other.topic, topic) || other.topic == topic) &&
             (identical(other.fileName, fileName) ||
                 other.fileName == fileName) &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.topicId, topicId) || other.topicId == topicId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_keyWords), topic, fileName, id);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_keyWords),
+      topic,
+      fileName,
+      id,
+      topicId);
 
   @JsonKey(ignore: true)
   @override
@@ -207,7 +231,8 @@ abstract class _Topic implements Topic {
       {@JsonKey(name: 'key_words') required final List<dynamic>? keyWords,
       @JsonKey(name: 'topic') required final String? topic,
       @JsonKey(name: 'file_name') required final String? fileName,
-      @JsonKey(name: 'sub_id') required final String? id}) = _$_Topic;
+      @JsonKey(name: 'sub_id') required final String? id,
+      @JsonKey(name: 'id') required final String? topicId}) = _$_Topic;
 
   factory _Topic.fromJson(Map<String, dynamic> json) = _$_Topic.fromJson;
 
@@ -223,6 +248,9 @@ abstract class _Topic implements Topic {
   @override
   @JsonKey(name: 'sub_id')
   String? get id;
+  @override
+  @JsonKey(name: 'id')
+  String? get topicId;
   @override
   @JsonKey(ignore: true)
   _$$_TopicCopyWith<_$_Topic> get copyWith =>

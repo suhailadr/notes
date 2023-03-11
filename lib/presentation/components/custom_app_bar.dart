@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mudavvanath/core/colors.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -11,35 +11,34 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        color: Colors.transparent,
         height: 60,
         margin: const EdgeInsets.all(10),
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              if (backButton)
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.arrow_back,
-                        color: Colors.grey, size: 25)),
-              const SizedBox(width: 10),
-
-              Expanded(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            if (backButton)
+              IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.arrow_back,
+                      color: Colors.blueGrey, size: 25)),
+            Expanded(
+              child: Center(
                 child: Text(
                   title,
-                  style: const TextStyle(
+                  style: GoogleFonts.reemKufi(
                       color: kPrimaryColor,
                       fontSize: 25,
                       fontWeight: FontWeight.bold),
                 ),
               ),
-
-              // const Padding(
-              //   padding: EdgeInsets.symmetric(horizontal: 10),
-              //   child: Icon(Icons.info, color: kPrimaryColor),
-              // )
-            ],
-          ),
+            ),
+            const SizedBox(
+              width: 30,
+            )
+          ],
         ),
       ),
     );

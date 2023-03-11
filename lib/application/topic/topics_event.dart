@@ -7,4 +7,6 @@ class TopicsEvent with _$TopicsEvent {
   const factory TopicsEvent.uploadTopicEvent(Topic file) = _UploadTopicEvent;
   const factory TopicsEvent.deleteTopic(String id) = _DeleteTopic;
   const factory TopicsEvent.savePdf(String subId, String fileName) = _SavePdf;
+  const factory TopicsEvent.search(String query) = _Search;
+  const factory TopicsEvent.editTopic(String id, String newValue) = _EditTopic;
 }

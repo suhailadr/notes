@@ -18,6 +18,7 @@ class TopicsRepository implements TopicServices {
       final dataFromFirebase = await FirebaseFirestore.instance
           .collection('topics')
           .where('sub_id', isEqualTo: subId)
+          .orderBy('file_name')
           .get()
           .then((value) {
         return value.docs;
@@ -46,6 +47,7 @@ class TopicsRepository implements TopicServices {
             .collection('topics')
             .doc("${topic.id}${topic.topic}")
             .set({
+          'id': topic.topicId,
           'key_words': topic.keyWords,
           'sub_id': topic.id,
           'file_name': docName,
@@ -92,6 +94,54 @@ class TopicsRepository implements TopicServices {
         File file = File(filepath);
 
         await file.writeAsBytes(bytes, flush: true);
+      } catch (e) {
+        return const Left(MainFailure.serverFailure());
+      }
+    } catch (_) {
+      return const Left(MainFailure.clientFailure());
+    }
+  }
+
+  @override
+  Future<Either<MainFailure, List<Topic>>> search(String query) async {
+    try {
+      final dataFromFirebase = await FirebaseFirestore.instance
+          .collection('topics')
+          .where('topic', isGreaterThanOrEqualTo: query)
+          .limit(10)
+          .get()
+          .then((value) {
+        return value.docs;
+      });
+
+      final List<Topic> topicList =
+          dataFromFirebase.map((e) => Topic.fromJson(e.data())).toList();
+      print('cccc');
+      print(topicList);
+
+      return Right(topicList);
+    } catch (_) {
+      return const Left(MainFailure.clientFailure());
+    }
+  }
+
+  @override
+  Future editTopic(String id, String newValue) async {
+    try {
+      try {
+        print(id);
+        // final doc = await FirebaseFirestore.instance.collection('topics');
+        // doc.get().then((querySnapshot) {
+        //   querySnapshot.docs.forEach((element) {
+        //     final docref = doc.doc(element.id);
+        //     docref.update({'id': element.id});
+        //   });
+        // });
+
+        FirebaseFirestore.instance
+            .collection('topics')
+            .doc(id)
+            .set({'topic': newValue}, SetOptions(merge: true));
       } catch (e) {
         return const Left(MainFailure.serverFailure());
       }

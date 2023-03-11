@@ -6,8 +6,6 @@ import 'package:mudavvanath/presentation/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-import 'core/colors.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -31,7 +29,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.teal),
+        theme: ThemeData(primarySwatch: Colors.blueGrey),
         home: const HomePage(),
       ),
     );
